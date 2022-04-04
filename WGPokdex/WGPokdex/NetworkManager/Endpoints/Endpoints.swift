@@ -9,5 +9,5 @@ import Foundation
 
 enum Endpoint: String {
     case Pokemon = "/pokemon/"
-    case Ability = "/ability"
+    case Ability = "/ability/"
 }

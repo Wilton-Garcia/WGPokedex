@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     @StateObject var viewModel = ContentViewModel()
     
     var body: some View {
-        Button(action: {
-            viewModel.test()
-        }, label: {
-            Text("Click")
-        })
+        VStack{
+            Button(action: {
+                viewModel.test()
+            }, label: {
+                Text("Load Pokemon")
+            })
+            
+            
+            Text(viewModel.PokemonName)
+        }
     }
 }
 

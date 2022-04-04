@@ -27,8 +27,10 @@ class NetworkManager: NetworkManagerProtocol {
     func executeRequest(request: URLRequest, success: @escaping (Data?) -> Void) {
         let urlSession = URLSession.shared
         let dataTask = urlSession.dataTask(with: request) { apiData, urlResponse, error in
-            if let data = apiData {
-                success(data)
+            DispatchQueue.main.async {
+                if let data = apiData {
+                    success(data)
+                }
             }
         }
         dataTask.resume()
