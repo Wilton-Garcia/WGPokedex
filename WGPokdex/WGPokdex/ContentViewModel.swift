@@ -9,11 +9,11 @@ import Foundation
 
 class ContentViewModel: ObservableObject{
     
-    @Published var PokemonName = ""
+    @Published var PokemonName = "Pokemon Name"
     
-    func test(){
+    func test(id: String){
        let pkr = PokemonRepository()
-        pkr.getPokemonById(id: 0) { pokemon in
+        pkr.getPokemonById(id: id) { pokemon in
             self.PokemonName = pokemon.name!
         }
     }
