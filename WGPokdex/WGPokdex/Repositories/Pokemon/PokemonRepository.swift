@@ -26,7 +26,9 @@ class PokemonRepository: PokemonRepositoryProtocol {
     
     func getPokemonById(id: String, completion: @escaping (_: PokemonGetResult) -> Void) {
         print("Get Pokemons By Id")
-        let request = NetworkRequest.buildGetRequest(endpoint: Endpoint.Pokemon, parameters: id)
+        
+        let parameters = [String.Empity : id]
+        let request = NetworkRequest.buildGetRequest(endpoint: Endpoint.Pokemon, parameters: parameters)
         NetworkManager.shared.executeRequest(request: request) { result in
             completion(result)
         }
@@ -35,16 +37,6 @@ class PokemonRepository: PokemonRepositoryProtocol {
     
     func getPokemonByName(name: String, completion: @escaping (_: Pokemon)-> Void) {
         print("Get Pokemons By Name")
-        let request = NetworkManager.shared.buildRequest(endpoint: Endpoint.Pokemon.rawValue, routerParam: name)
-        NetworkManager.shared.executeRequest(request: request){ pokemon in
-            do{
-                if let pokemonData = pokemon {
-                    let pokemon = try JSONDecoder().decode(Pokemon.self, from: pokemonData)
-                    completion(pokemon)
-                }
-            } catch {
-                print("Erro na conversão")
-            }
-        }
+        
     }
 }

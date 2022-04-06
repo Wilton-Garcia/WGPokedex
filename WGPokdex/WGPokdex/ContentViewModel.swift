@@ -18,7 +18,7 @@ class ContentViewModel: ObservableObject{
             case .success(let response):
                 self.PokemonName = response.data.name
             case .failure(let error):
-                self.PokemonName = "Encontramos um erro"
+                self.PokemonName = error.localizedDescription
             }
         }
     }

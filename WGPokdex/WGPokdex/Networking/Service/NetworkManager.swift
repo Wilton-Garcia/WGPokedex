@@ -20,26 +20,30 @@ class NetworkManager: NetworkManagerProtocol {
         self.session = session
     }
     
-     fileprivate func buildRequest(request: NetworkRequest) -> URLRequest {
-         let url = request.baseURL.appendingPathComponent(request.endpoint.rawValue)
+    fileprivate func buildRequest(networkRequest: NetworkRequest) -> URLRequest {
+        let url = networkRequest.baseURL.appendingPathComponent(networkRequest.endpoint.rawValue)
+        
         var request = URLRequest(url: url,
                                  cachePolicy: .returnCacheDataElseLoad,
                                  timeoutInterval: 10) //TODO: Definir intervalo de cache em um arquivo próprio
+        
+        if let queryParams = networkRequest.parameters {
+            try URLParameterEncoder().encode(urlRequest: &request, with: queryParams)
+        }
+        
         return request
     }
     
     func executeRequest <T: Codable> (request: NetworkRequest, completion: @escaping (Result<T, NetworkError>) -> Void) {
         do{
-            let request = buildRequest(request: request)
+            let request = self.buildRequest(networkRequest: request)
             task = session.dataTask(with: request, completionHandler: {data, response, error in
                 DispatchQueue.main.async {
-                    
                     let httpResponse = response as? HTTPURLResponse
                     guard let data = data else {
                         completion(.failure(.genericError(httpStatusCode: httpResponse?.statusCode)))
                         return
                     }
-                    
                     do {
                         let decoded = try JSONDecoder().decode(T.self, from: data)
                         completion(.success(decoded))
