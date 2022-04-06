@@ -8,11 +8,7 @@
 import Foundation
 
 protocol NetworkManagerProtocol{
-    func executeRequest(request: URLRequest, success: @escaping (Data?) -> Void)
     func executeRequest <T: Codable> (request: NetworkRequest, completion: @escaping (Result<T,NetworkError>) -> Void)
-    func buildRequest(request: NetworkRequest) -> URLRequest
-    func buildRequest(endpoint: String) -> URLRequest
-    func buildRequest(endpoint: String, routerParam: String?) -> URLRequest
 }
 
 class NetworkManager: NetworkManagerProtocol {
@@ -24,8 +20,8 @@ class NetworkManager: NetworkManagerProtocol {
         self.session = session
     }
     
-    internal func buildRequest(request: NetworkRequest) -> URLRequest {
-        let url = request.baseURL.appendingPathComponent(request.endpoint.rawValue)
+     fileprivate func buildRequest(request: NetworkRequest) -> URLRequest {
+         let url = request.baseURL.appendingPathComponent(request.endpoint.rawValue)
         var request = URLRequest(url: url,
                                  cachePolicy: .returnCacheDataElseLoad,
                                  timeoutInterval: 10) //TODO: Definir intervalo de cache em um arquivo próprio
@@ -56,31 +52,5 @@ class NetworkManager: NetworkManagerProtocol {
             print("Erro na chamada da API")
         }
         self.task?.resume()
-    }
-    
-    func buildRequest(endpoint: String) -> URLRequest {
-        let url = URL(string: endpoint)!
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = HTTPMethod.get.rawValue
-        return urlRequest
-    }
-    
-    func buildRequest(endpoint: String, routerParam: String?) -> URLRequest {
-        let urlFinal = URL(string: URLs.urlPokemonBase.rawValue+endpoint+(routerParam ?? String.Empity))
-        var urlRequest = URLRequest(url: urlFinal!)
-        urlRequest.httpMethod = HTTPMethod.get.rawValue
-        return urlRequest
-    }
-    
-    func executeRequest(request: URLRequest, success: @escaping (Data?) -> Void) {
-        let urlSession = URLSession.shared
-        let dataTask = urlSession.dataTask(with: request) { apiData, urlResponse, error in
-            DispatchQueue.main.async {
-                if let data = apiData {
-                    success(data)
-                }
-            }
-        }
-        dataTask.resume()
     }
 }

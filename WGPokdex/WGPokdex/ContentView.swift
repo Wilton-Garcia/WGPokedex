@@ -30,7 +30,6 @@ struct ContentView: View {
             
             
             Text(viewModel.PokemonName)
-                .scaleEffect(2)
                 .frame(width: 300, height: 75)
                 .background(Color.orange).foregroundColor(.blue)
         }

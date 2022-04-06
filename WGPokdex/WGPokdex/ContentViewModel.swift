@@ -13,8 +13,13 @@ class ContentViewModel: ObservableObject{
     
     func test(id: String){
         let pkr = PokemonRepository()
-        pkr.getPokemonById(id: id) { pokemon in
-            self.PokemonName = pokemon.name!
+        pkr.getPokemonById(id: id) { result in
+            switch result {
+            case .success(let response):
+                self.PokemonName = response.data.name
+            case .failure(let error):
+                self.PokemonName = "Encontramos um erro"
+            }
         }
     }
 }

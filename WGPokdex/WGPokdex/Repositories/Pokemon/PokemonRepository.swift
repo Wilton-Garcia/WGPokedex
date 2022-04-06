@@ -7,33 +7,28 @@
 
 import Foundation
 
+typealias PokemonResponse = DefaultResponse<Pokemon>
+typealias PokemonGetResult = Result<PokemonResponse, NetworkError>
+
+
 protocol PokemonRepositoryProtocol{
     func getPokemons()
-    func getPokemonById(id: String, completion: @escaping (_: Pokemon) -> Void)
+    func getPokemonById(id: String, completion: @escaping (_: PokemonGetResult) -> Void)
     func getPokemonByName(name: String, completion: @escaping (_: Pokemon) -> Void)
 }
 
 class PokemonRepository: PokemonRepositoryProtocol {
+ 
     func getPokemons() {
         print("Get All Pokemons")
         // let request = NetworkManager.shared.buildRequest(endpoint: Endpoint.Pokemon.rawValue, routerParam: id)
     }
     
-    func getPokemonById(id: String, completion: @escaping (_: Pokemon) -> Void) {
+    func getPokemonById(id: String, completion: @escaping (_: PokemonGetResult) -> Void) {
         print("Get Pokemons By Id")
-        
-        let request = NetworkRequest.buildGetRequest(endpoint: Endpoint.Pokemon,
-                                                     parameters: id)
-        
-        
-    //    NetworkManager.shared.executeRequest(request: request) { pokemonData in
-            do{
-           //     let pokemon = try JSONDecoder().decode(Pokemon.self, from: pokemonData)
-                    //completion(pokemon)
-                
-                
-            } catch{
-                
+        let request = NetworkRequest.buildGetRequest(endpoint: Endpoint.Pokemon, parameters: id)
+        NetworkManager.shared.executeRequest(request: request) { result in
+            completion(result)
         }
         
     }
