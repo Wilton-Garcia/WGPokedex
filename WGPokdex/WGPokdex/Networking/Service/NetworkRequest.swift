@@ -9,16 +9,20 @@ import Foundation
 
 struct NetworkRequest {
     let baseURL: URL
+    let endpoint: Endpoint
     let httpMethod: HTTPMethod
     let parameters: String?
     
-    static func buildGetRequest(parameters: String?) -> NetworkRequest{
-        buildRequest(method: .get, parameters: parameters)
+    static func buildGetRequest(endpoint: Endpoint, parameters: String?) -> NetworkRequest{
+        buildRequest(method: .get,
+                     endpoint: endpoint,
+                     parameters: parameters)
     }
     
-    private static func buildRequest(method: HTTPMethod, parameters: String?) -> NetworkRequest{
+    private static func buildRequest(method: HTTPMethod, endpoint: Endpoint, parameters: String?) -> NetworkRequest{
         NetworkRequest(baseURL: URL(string: URLs.urlPokemonBase.rawValue)!,
-                     httpMethod: method,
-                     parameters: parameters)
+                       endpoint: endpoint,
+                       httpMethod: method,
+                       parameters: parameters)
     }
 }

@@ -15,7 +15,7 @@ struct ContentView: View {
         VStack{
             TextField(text: $id, label: {
                 Text("Pokemon ID").scaleEffect(2)
-                    
+                
             }).padding().keyboardType(.numberPad)
                 .frame(width: 300, height: 75)
                 .border(.orange)
@@ -27,7 +27,7 @@ struct ContentView: View {
             }).frame(width: 300, height: 100)
                 .background(Color.orange)
             
-           
+            
             
             Text(viewModel.PokemonName)
                 .scaleEffect(2)
