@@ -11,6 +11,12 @@
 		4D2096E327FB745300BC0B9F /* HttpMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2096E227FB745300BC0B9F /* HttpMethods.swift */; };
 		4D2096E627FB77DE00BC0B9F /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2096E527FB77DE00BC0B9F /* PokemonRepository.swift */; };
 		4D2096E927FB789500BC0B9F /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2096E827FB789500BC0B9F /* Pokemon.swift */; };
+		4D2CE17227FC819900AF0201 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE17127FC819900AF0201 /* StringExtension.swift */; };
+		4D2CE17427FC824E00AF0201 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE17327FC824E00AF0201 /* URLs.swift */; };
+		4D2CE17827FCB91900AF0201 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE17727FCB91900AF0201 /* NetworkRequest.swift */; };
+		4D2CE17A27FDD04F00AF0201 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE17927FDD04F00AF0201 /* NetworkError.swift */; };
+		4D2CE17D27FDF36800AF0201 /* DefaultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE17C27FDF36800AF0201 /* DefaultResponse.swift */; };
+		4D2CE18127FE14D000AF0201 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2CE18027FE14D000AF0201 /* URLParameterEncoder.swift */; };
 		4D9D4EBA27F4C992008BA39C /* WGPokdexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */; };
 		4D9D4EBC27F4C992008BA39C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4EBB27F4C992008BA39C /* ContentView.swift */; };
 		4D9D4EBE27F4C995008BA39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4EBD27F4C995008BA39C /* Assets.xcassets */; };
@@ -44,6 +50,12 @@
 		4D2096E227FB745300BC0B9F /* HttpMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethods.swift; sourceTree = "<group>"; };
 		4D2096E527FB77DE00BC0B9F /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
 		4D2096E827FB789500BC0B9F /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		4D2CE17127FC819900AF0201 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		4D2CE17327FC824E00AF0201 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		4D2CE17727FCB91900AF0201 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		4D2CE17927FDD04F00AF0201 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		4D2CE17C27FDF36800AF0201 /* DefaultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultResponse.swift; sourceTree = "<group>"; };
+		4D2CE18027FE14D000AF0201 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		4D9D4EB627F4C992008BA39C /* WGPokdex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGPokdex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGPokdexApp.swift; sourceTree = "<group>"; };
 		4D9D4EBB27F4C992008BA39C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				4D2096E227FB745300BC0B9F /* HttpMethods.swift */,
+				4D2CE17327FC824E00AF0201 /* URLs.swift */,
+				4D2CE18027FE14D000AF0201 /* URLParameterEncoder.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -114,6 +128,40 @@
 				4D2096E827FB789500BC0B9F /* Pokemon.swift */,
 			);
 			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		4D2CE16F27FC817C00AF0201 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CE17027FC818500AF0201 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4D2CE17027FC818500AF0201 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CE17127FC819900AF0201 /* StringExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D2CE17527FCB11000AF0201 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D4EE427F4FA73008BA39C /* NetworkManager.swift */,
+				4D2CE17727FCB91900AF0201 /* NetworkRequest.swift */,
+				4D2CE17927FDD04F00AF0201 /* NetworkError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4D2CE17B27FDF34B00AF0201 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4D2CE17C27FDF36800AF0201 /* DefaultResponse.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		4D9D4EAD27F4C992008BA39C = {
@@ -139,8 +187,10 @@
 		4D9D4EB827F4C992008BA39C /* WGPokdex */ = {
 			isa = PBXGroup;
 			children = (
+				4D2CE17B27FDF34B00AF0201 /* Domain */,
+				4D2CE16F27FC817C00AF0201 /* Common */,
 				4D2096E427FB77CA00BC0B9F /* Repositories */,
-				4D9D4EE327F4FA5A008BA39C /* NetworkManager */,
+				4D9D4EE327F4FA5A008BA39C /* Networking */,
 				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 				4D9D4EBB27F4C992008BA39C /* ContentView.swift */,
 				4D9D4EE627F553ED008BA39C /* ContentViewModel.swift */,
@@ -175,14 +225,14 @@
 			path = WGPokdexUITests;
 			sourceTree = "<group>";
 		};
-		4D9D4EE327F4FA5A008BA39C /* NetworkManager */ = {
+		4D9D4EE327F4FA5A008BA39C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4D2CE17527FCB11000AF0201 /* Service */,
 				4D2096E127FB744200BC0B9F /* Tools */,
 				4D2096DE27FB70BE00BC0B9F /* Endpoints */,
-				4D9D4EE427F4FA73008BA39C /* NetworkManager.swift */,
 			);
-			path = NetworkManager;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,10 +369,16 @@
 				4D2096E927FB789500BC0B9F /* Pokemon.swift in Sources */,
 				4D2096E627FB77DE00BC0B9F /* PokemonRepository.swift in Sources */,
 				4D9D4EE527F4FA73008BA39C /* NetworkManager.swift in Sources */,
+				4D2CE18127FE14D000AF0201 /* URLParameterEncoder.swift in Sources */,
 				4D2096E327FB745300BC0B9F /* HttpMethods.swift in Sources */,
+				4D2CE17427FC824E00AF0201 /* URLs.swift in Sources */,
+				4D2CE17227FC819900AF0201 /* StringExtension.swift in Sources */,
 				4D9D4EBC27F4C992008BA39C /* ContentView.swift in Sources */,
+				4D2CE17827FCB91900AF0201 /* NetworkRequest.swift in Sources */,
+				4D2CE17A27FDD04F00AF0201 /* NetworkError.swift in Sources */,
 				4D9D4EBA27F4C992008BA39C /* WGPokdexApp.swift in Sources */,
 				4D2096E027FB70DC00BC0B9F /* Endpoints.swift in Sources */,
+				4D2CE17D27FDF36800AF0201 /* DefaultResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

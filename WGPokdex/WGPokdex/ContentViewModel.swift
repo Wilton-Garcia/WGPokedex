@@ -10,6 +10,7 @@ import Foundation
 class ContentViewModel: ObservableObject{
     
     @Published var PokemonName = "Pokemon Name"
+    @Published var PokemonSprite: URL?
     
     func test(id: String){
         let pkr = PokemonRepository()
@@ -17,6 +18,7 @@ class ContentViewModel: ObservableObject{
             switch result {
             case .success(let pokemonData):
                 self.PokemonName = pokemonData.name
+                self.PokemonSprite = URL(string: pokemonData.sprites.front_default)
             case .failure(let error):
                 self.PokemonName = error.localizedDescription
             }

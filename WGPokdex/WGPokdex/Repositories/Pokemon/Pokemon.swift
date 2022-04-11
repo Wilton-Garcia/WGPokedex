@@ -9,4 +9,9 @@ import Foundation
 
 struct Pokemon: Codable{
     var name: String
+    var sprites: PokemonSprite
+}
+
+struct PokemonSprite : Codable {
+    var front_default: String
 }

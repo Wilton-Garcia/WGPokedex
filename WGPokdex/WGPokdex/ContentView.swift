@@ -26,9 +26,13 @@ struct ContentView: View {
                     .scaleEffect(2)
             }).frame(width: 300, height: 100)
                 .background(Color.orange)
-            Text(viewModel.PokemonName)
-                .frame(width: 300, height: 75)
-                .background(Color.orange).foregroundColor(.blue)
+            HStack{
+              
+                Text(viewModel.PokemonName)
+                AsyncImage(url: viewModel.PokemonSprite)
+                
+            }.frame(width: 300, height: 75)
+                .border(Color.orange).foregroundColor(.blue)
             Button(action: {
                 viewModel.test(id: id)
             }, label: {
@@ -36,19 +40,9 @@ struct ContentView: View {
                     .scaleEffect(2)
             }).frame(width: 300, height: 50)
                 .background(Color.green)
-            ScrollView(.vertical){
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-                PokeCard(name: "Bulbasauro")
-   
-            }.padding(.bottom)
+//            ScrollView(.vertical){
+//                PokeCard(name: "Bulbasauro")
+//            }.padding(.bottom)
         }
     }
 }
