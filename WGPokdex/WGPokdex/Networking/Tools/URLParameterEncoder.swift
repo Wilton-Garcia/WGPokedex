@@ -23,4 +23,17 @@ struct URLParameterEncoder: ParameterEncoder{
             urlRequest.url = urlComponents.url
         }
     }
+    
+}
+
+struct URLRouterParameterEncoder{
+    func encode(urlRequest: inout URLRequest, with parameters: String) {
+//        guard let url = urlRequest.url else { return }
+//        if let parameters = parameters {
+//            url.absoluteString.append("/\(parameters)")
+//        }
+//            urlRequest.url = urlComponents.url
+//        }
+    }
+    
 }
