@@ -26,12 +26,40 @@ struct ContentView: View {
                     .scaleEffect(2)
             }).frame(width: 300, height: 100)
                 .background(Color.orange)
-            
-            
-            
             Text(viewModel.PokemonName)
                 .frame(width: 300, height: 75)
                 .background(Color.orange).foregroundColor(.blue)
+            Button(action: {
+                viewModel.test(id: id)
+            }, label: {
+                Text("Load All Pokemon")
+                    .scaleEffect(2)
+            }).frame(width: 300, height: 50)
+                .background(Color.green)
+            ScrollView(.vertical){
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+                PokeCard(name: "Bulbasauro")
+   
+            }.padding(.bottom)
+        }
+    }
+}
+
+struct PokeCard: View {
+    let name: String
+    
+    var body: some View {
+        ZStack{
+            Rectangle().fill(Color.indigo).frame(width: 300, height: 50)
+            Text("Name:")
         }
     }
 }

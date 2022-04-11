@@ -15,8 +15,19 @@ class ContentViewModel: ObservableObject{
         let pkr = PokemonRepository()
         pkr.getPokemonById(id: id) { result in
             switch result {
-            case .success(let response):
-                self.PokemonName = response.data.name
+            case .success(let pokemonData):
+                self.PokemonName = pokemonData.name
+            case .failure(let error):
+                self.PokemonName = error.localizedDescription
+            }
+        }
+    }
+    func loadAll(){
+        let pkr = PokemonRepository()
+        pkr.getPokemons() { result in
+            switch result {
+            case .success(let pokemonData):
+                self.PokemonName = pokemonData.name
             case .failure(let error):
                 self.PokemonName = error.localizedDescription
             }
