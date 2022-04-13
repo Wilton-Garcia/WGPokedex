@@ -66,6 +66,7 @@ class NetworkManager: NetworkManagerProtocol {
                         print("Conveteu")
                         completion(.success(decoded))
                     } catch {
+                        print("Erro na conversão")
                         completion(.failure(.genericError(httpStatusCode: httpResponse?.statusCode)))
                     }
                 }

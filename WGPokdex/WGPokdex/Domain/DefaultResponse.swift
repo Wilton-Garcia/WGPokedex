@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct DefaultResponse<T: Codable> : Codable {
-    let data: T
+struct DefaultResponse: Codable {
+    let next: String?
+    let previous: String?
+    let results: [DefaultResult]
+}
+
+struct DefaultResult: Codable {
+    let name: String
+    let url: URL
 }

@@ -29,31 +29,37 @@ struct ContentView: View {
             HStack{
               
                 Text(viewModel.PokemonName)
+                Spacer()
                 AsyncImage(url: viewModel.PokemonSprite)
                 
             }.frame(width: 300, height: 75)
                 .border(Color.orange).foregroundColor(.blue)
             Button(action: {
-                viewModel.test(id: id)
+                viewModel.loadAll()
             }, label: {
                 Text("Load All Pokemon")
                     .scaleEffect(2)
             }).frame(width: 300, height: 50)
                 .background(Color.green)
-//            ScrollView(.vertical){
-//                PokeCard(name: "Bulbasauro")
-//            }.padding(.bottom)
+            ScrollView(.vertical){
+//                ForEach(viewModel.Result!){ result in
+//                    PokeCard(name: result.name, urlImage: result.url)
+//                    
+              //  }
+            }.padding(.bottom)
         }
     }
 }
 
 struct PokeCard: View {
     let name: String
+    let urlImage: URL
     
     var body: some View {
         ZStack{
             Rectangle().fill(Color.indigo).frame(width: 300, height: 50)
             Text("Name:")
+            AsyncImage(url: urlImage )
         }
     }
 }
@@ -61,5 +67,11 @@ struct PokeCard: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 12 mini")
+            .preferredColorScheme(.light)
+        ContentView()
+            .previewDevice("iPhone 12 mini")
+            .preferredColorScheme(.dark)
+       
     }
 }

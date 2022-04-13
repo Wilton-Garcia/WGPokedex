@@ -7,9 +7,13 @@
 
 import Foundation
 
+struct Pokedex {
+    
+}
+
 struct Pokemon: Codable{
+    var id: Int
     var name: String
-    var sprites: PokemonSprite
 }
 
 struct PokemonSprite : Codable {

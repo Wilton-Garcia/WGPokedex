@@ -9,4 +9,5 @@ import Foundation
 
 enum URLs: String{
     case urlPokemonBase = "https://pokeapi.co/api/v2"
+    case pokemonFrontImageBase = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
 }
