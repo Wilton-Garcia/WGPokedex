@@ -9,16 +9,23 @@ import Foundation
 import UIKit
 import SwiftUI
 
-
-struct Theme {
-    struct PokemonColor{
-        static let typeBug = Color(UIColor(red: 140, green: 178, blue: 48, alpha: 1))
-        static let red = Color(UIColor(red: 255, green: 0, blue: 0, alpha: 1))
-        static let red2 = Color(UIColor(red: 255, green: 10, blue: 10, alpha: 1))
-    }
-}
-
 extension Color{
+    
+    static var BackgroundWhite: Color {
+        Color(red: 255, green: 255, blue: 255)
+    }
+    
+    static var BackgroundDefaultInput: Color {
+        Color(red: 242, green: 242, blue: 242)
+    }
+    
+    static var BackgroundPressedInput: Color {
+        Color(red: 226, green: 226, blue: 226)
+    }
+    
+    static var BackgroundModal: Color {
+        Color(red: 23, green: 23, blue: 23)
+    }
     
     static var BackgroundTypeBug: Color {
         Color(red: 139, green: 214, blue: 116)
@@ -170,78 +177,75 @@ extension Color{
 }
 
 struct Colors_Preview: PreviewProvider {
-    static var previews: some View{
+    static var previews: some View {
         HStack {
-            VStack{
-                Group{
+            VStack {
+                Group {
                     Text("Color Pokemon Types")
-                    Group{
+                    Group {
                         Color.TypeBug
                         Color.TypeDark
                         Color.TypeDragon
                         Color.TypeEletric
                     }
-                    Group{
+                    Group {
                         Color.TypeFairy
                         Color.TypeFighting
                         Color.TypeFire
                         Color.TypeFlying
                     }
-                    Group{
+                    Group {
                         Color.TypeGhost
                         Color.TypeGrass
                         Color.TypeGround
                         Color.TypeIce
                     }
-                    Group{
+                    Group {
                         Color.TypeNormal
                         Color.TypePoison
                         Color.TypePsychic
                         Color.TypeRock
                     }
-                    Group{
+                    Group {
                         Color.TypeSteel
                         Color.TypeWater
                     }
-                    
                 }
             }
-            VStack{
+            VStack {
                 Group {
                     Text("Background Type Colors")
-                    Group{
+                    Group {
                         Color.BackgroundTypeBug
                         Color.BackgroundTypeDark
                         Color.BackgroundTypeDragon
                         Color.BackgroundTypeElectric
                     }
-                    Group{
+                    Group {
                         Color.BackgroundTypeFairy
                         Color.BackgroundTypeFighting
                         Color.BackgroundTypeFire
                         Color.BackgroundTypeFlying
                     }
-                    Group{
+                    Group {
                         Color.BackgroundTypeGhost
                         Color.BackgroundTypeGrass
                         Color.BackgroundTypeGround
                         Color.BackgroundTypeIce
                     }
-                    Group{
+                    Group {
                         Color.BackgroundTypeNormal
                         Color.BackroundTypePoison
                         Color.BackgroundTypePsychic
                         Color.BackgroundTypeRock
                     }
-                    Group{
+                    Group {
                         Color.BackgroundTypeSteel
                         Color.BackgroundTypeWater
                     }
                 }
             }
-            
         }
-          
-        .previewDevice("iPhone 13 Pro Max")
+        .previewDevice("iPad Pro (12.9-inch) (5th generation)")
     }
 }
