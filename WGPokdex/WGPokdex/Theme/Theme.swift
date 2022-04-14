@@ -9,6 +9,67 @@ import Foundation
 import UIKit
 import SwiftUI
 
+
+extension LinearGradient {
+    
+    static var GradientVector: LinearGradient{
+        LinearGradient(colors: [
+            Color(red: 255, green: 255, blue: 255, opacity: 0.3),
+            Color(red: 255, green: 255, blue: 255, opacity:0)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientPokeball: LinearGradient {
+        LinearGradient(colors: [
+            Color(red: 245, green: 245, blue: 245, opacity: 1),
+            Color(red: 255, green: 255, blue: 255, opacity: 1)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientVectorGrey: LinearGradient {
+        LinearGradient(colors: [
+            Color(red: 229, green: 229, blue: 229, opacity: 1),
+            Color(red: 245, green: 245, blue: 245, opacity: 0)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientPokeballGrey: LinearGradient {
+        LinearGradient(colors: [
+            Color(red: 236, green: 236, blue: 236, opacity: 1),
+            Color(red: 245, green: 245, blue: 245, opacity: 1)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientVectorWhite: LinearGradient{
+        LinearGradient(colors: [
+            Color(red: 255, green: 255, blue: 255, opacity: 0.3),
+            Color(red: 255, green: 255, blue: 255, opacity: 0)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientPokeballWhite: LinearGradient{
+        LinearGradient(colors: [
+            Color(red: 255, green: 255, blue: 255, opacity: 0.1),
+            Color(red: 255, green: 255, blue: 255, opacity:0)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientPokemonName: LinearGradient{
+        LinearGradient(colors: [
+            Color(red: 255, green: 255, blue: 255, opacity: 0.3),
+            Color(red: 255, green: 255, blue: 255, opacity:0)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+    
+    static var GradientPokemonCircle: LinearGradient{
+        LinearGradient(colors: [
+            Color(red: 255, green: 255, blue: 255, opacity: 0),
+            Color(red: 255, green: 255, blue: 255, opacity: 0.35)],
+            startPoint: .leading, endPoint: .trailing)
+    }
+ 
+}
+
 extension Color{
     
     static var BackgroundWhite: Color {
@@ -243,6 +304,25 @@ struct Colors_Preview: PreviewProvider {
                         Color.BackgroundTypeSteel
                         Color.BackgroundTypeWater
                     }
+                }
+            }
+            VStack{
+                Text("Normal Background")
+                Group{
+                    Color.BackgroundWhite
+                    Color.BackgroundDefaultInput
+                    Color.BackgroundPressedInput
+                    Color.BackgroundModal
+                }
+                Text("Gradient")
+                Group{
+                    LinearGradient.GradientVector
+                    LinearGradient.GradientPokeball
+                    LinearGradient.GradientVectorGrey
+                    LinearGradient.GradientPokeballGrey
+                    LinearGradient.GradientVectorWhite
+                    LinearGradient.GradientPokemonName
+                    LinearGradient.GradientPokemonCircle
                 }
             }
         }
