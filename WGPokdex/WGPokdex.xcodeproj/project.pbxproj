@@ -97,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				4DAD64B128075EB0007300CF /* Theme */,
-				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 				4D9D4EBB27F4C992008BA39C /* ContentView.swift */,
 				4D9D4EBD27F4C995008BA39C /* Assets.xcassets */,
 				4D9D4EBF27F4C995008BA39C /* Preview Content */,
@@ -134,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				4DAD64B228075ECF007300CF /* Theme.swift */,
+				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";

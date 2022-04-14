@@ -19,6 +19,79 @@ struct Theme {
 }
 
 extension Color{
+    
+    static var BackgroundTypeBug: Color {
+        Color(red: 139, green: 214, blue: 116)
+    }
+    
+    static var BackgroundTypeDark: Color {
+        Color(red: 111, green: 110, blue: 120)
+    }
+    
+    static var BackgroundTypeDragon: Color {
+        Color(red: 115, green: 131, blue: 185)
+    }
+    
+    static var BackgroundTypeElectric: Color {
+        Color(red: 242, green: 203, blue: 85)
+    }
+    
+    static var BackgroundTypeFairy: Color {
+        Color(red: 235, green: 168, blue: 195)
+    }
+    
+    static var BackgroundTypeFighting: Color {
+        Color(red: 235, green: 73, blue: 113)
+    }
+    
+    static var BackgroundTypeFire: Color {
+        Color(red: 255, green: 167, blue: 86)
+    }
+    
+    static var BackgroundTypeFlying: Color {
+        Color(red: 131, green: 162, blue: 227)
+    }
+    
+    static var BackgroundTypeGhost: Color {
+        Color(red: 133, green: 113, blue: 190)
+    }
+    
+    static var BackgroundTypeGrass: Color {
+        Color(red: 139, green: 190, blue: 138)
+    }
+    
+    static var BackgroundTypeGround: Color {
+        Color(red: 247, green: 133, blue: 81)
+    }
+    
+    static var BackgroundTypeIce: Color {
+        Color(red: 145, green: 216, blue: 223)
+    }
+    
+    static var BackgroundTypeNormal: Color {
+        Color(red: 181, green: 185, blue: 196)
+    }
+    
+    static var BackroundTypePoison: Color {
+        Color(red: 159, green: 110, blue: 151)
+    }
+    
+    static var BackgroundTypePsychic: Color{
+        Color(red: 255, green: 101, blue: 104)
+    }
+    
+    static var BackgroundTypeRock: Color {
+        Color(red: 212, green: 194, blue: 148)
+    }
+    
+    static var BackgroundTypeSteel: Color {
+        Color(red: 76, green: 145, blue: 178)
+    }
+    
+    static var BackgroundTypeWater: Color {
+        Color(red: 88, green: 171, blue: 246)
+    }
+    
     static var TypeBug: Color {
         Color(red: 140, green: 178, blue: 48)
     }
@@ -98,7 +171,8 @@ extension Color{
 
 struct Colors_Preview: PreviewProvider {
     static var previews: some View{
-        VStack {
+        HStack {
+            VStack{
                 Group{
                     Text("Color Pokemon Types")
                     Group{
@@ -131,8 +205,39 @@ struct Colors_Preview: PreviewProvider {
                     }
                     
                 }
-            Group {
-                Text("Background Type Colors")
+            }
+            VStack{
+                Group {
+                    Text("Background Type Colors")
+                    Group{
+                        Color.BackgroundTypeBug
+                        Color.BackgroundTypeDark
+                        Color.BackgroundTypeDragon
+                        Color.BackgroundTypeElectric
+                    }
+                    Group{
+                        Color.BackgroundTypeFairy
+                        Color.BackgroundTypeFighting
+                        Color.BackgroundTypeFire
+                        Color.BackgroundTypeFlying
+                    }
+                    Group{
+                        Color.BackgroundTypeGhost
+                        Color.BackgroundTypeGrass
+                        Color.BackgroundTypeGround
+                        Color.BackgroundTypeIce
+                    }
+                    Group{
+                        Color.BackgroundTypeNormal
+                        Color.BackroundTypePoison
+                        Color.BackgroundTypePsychic
+                        Color.BackgroundTypeRock
+                    }
+                    Group{
+                        Color.BackgroundTypeSteel
+                        Color.BackgroundTypeWater
+                    }
+                }
             }
             
         }
