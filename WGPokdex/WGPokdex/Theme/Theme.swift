@@ -12,10 +12,10 @@ import SwiftUI
 
 extension LinearGradient {
     
-    static var GradientVector: LinearGradient{
+    static var GradientVector: LinearGradient {
         LinearGradient(colors: [
             Color(red: 255, green: 255, blue: 255, opacity: 0.3),
-            Color(red: 255, green: 255, blue: 255, opacity:0)],
+            Color(red: 255, green: 255, blue: 255, opacity: 0)],
             startPoint: .leading, endPoint: .trailing)
     }
     
@@ -40,28 +40,28 @@ extension LinearGradient {
             startPoint: .leading, endPoint: .trailing)
     }
     
-    static var GradientVectorWhite: LinearGradient{
+    static var GradientVectorWhite: LinearGradient {
         LinearGradient(colors: [
             Color(red: 255, green: 255, blue: 255, opacity: 0.3),
             Color(red: 255, green: 255, blue: 255, opacity: 0)],
             startPoint: .leading, endPoint: .trailing)
     }
     
-    static var GradientPokeballWhite: LinearGradient{
+    static var GradientPokeballWhite: LinearGradient {
         LinearGradient(colors: [
             Color(red: 255, green: 255, blue: 255, opacity: 0.1),
             Color(red: 255, green: 255, blue: 255, opacity:0)],
             startPoint: .leading, endPoint: .trailing)
     }
     
-    static var GradientPokemonName: LinearGradient{
+    static var GradientPokemonName: LinearGradient {
         LinearGradient(colors: [
             Color(red: 255, green: 255, blue: 255, opacity: 0.3),
-            Color(red: 255, green: 255, blue: 255, opacity:0)],
+            Color(red: 255, green: 255, blue: 255, opacity: 0)],
             startPoint: .leading, endPoint: .trailing)
     }
     
-    static var GradientPokemonCircle: LinearGradient{
+    static var GradientPokemonCircle: LinearGradient {
         LinearGradient(colors: [
             Color(red: 255, green: 255, blue: 255, opacity: 0),
             Color(red: 255, green: 255, blue: 255, opacity: 0.35)],
@@ -232,6 +232,30 @@ extension Color{
         Color(red: 74, green: 144, blue: 218)
     }
     
+    static var HeightShort: Color {
+        Color(red: 255, green: 197, blue: 230)
+    }
+    
+    static var HeightMedium: Color {
+        Color(red: 174, green: 191, blue: 215)
+    }
+    
+    static var HeightTall: Color {
+        Color(red: 170, green: 172, blue: 184)
+    }
+    
+    static var WeightLight: Color {
+        Color(red: 153, green: 205, blue: 124)
+    }
+    
+    static var WeightNormal: Color {
+        Color(red: 87, green: 178, blue: 220)
+    }
+    
+    static var WeightHeavy: Color {
+        Color(red: 90, green: 146, blue: 165)
+    }
+    
     init(red: Double, green: Double, blue: Double) {
         self.init(.sRGB, red: red / 255, green: green / 255, blue: blue / 255, opacity: 1)
     }
@@ -327,5 +351,6 @@ struct Colors_Preview: PreviewProvider {
             }
         }
         .previewDevice("iPad Pro (12.9-inch) (5th generation)")
+        .previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
