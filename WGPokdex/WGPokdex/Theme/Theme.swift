@@ -160,6 +160,10 @@ extension Color{
         Color(red: 88, green: 171, blue: 246)
     }
     
+    static var TextGray: Color {
+        Color(red: 116, green: 116, blue: 118)
+    }
+    
     static var TypeBug: Color {
         Color(red: 140, green: 178, blue: 48)
     }
