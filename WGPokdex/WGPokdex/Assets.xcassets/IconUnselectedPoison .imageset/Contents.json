@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "Type=Poison, Selected=False.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
