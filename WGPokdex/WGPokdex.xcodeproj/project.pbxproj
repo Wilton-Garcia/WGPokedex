@@ -16,6 +16,7 @@
 		4D9D4ED727F4C995008BA39C /* WGPokdexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4ED627F4C995008BA39C /* WGPokdexUITestsLaunchTests.swift */; };
 		4DAD64B328075ECF007300CF /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAD64B228075ECF007300CF /* Theme.swift */; };
 		4DF4874C280F03C100E28FFF /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4874B280F03C100E28FFF /* ButtonStyle.swift */; };
+		4DF4874F280F363E00E28FFF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4874E280F363E00E28FFF /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		4D9D4ED627F4C995008BA39C /* WGPokdexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGPokdexUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4DAD64B228075ECF007300CF /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4DF4874B280F03C100E28FFF /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		4DF4874E280F363E00E28FFF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		4D9D4EB827F4C992008BA39C /* WGPokdex */ = {
 			isa = PBXGroup;
 			children = (
+				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 				4DAD64B128075EB0007300CF /* Theme */,
 				4D9D4EBB27F4C992008BA39C /* ContentView.swift */,
 				4D9D4EBD27F4C995008BA39C /* Assets.xcassets */,
@@ -135,8 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				4DAD64B228075ECF007300CF /* Theme.swift */,
-				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 				4DF4874B280F03C100E28FFF /* ButtonStyle.swift */,
+				4DF4874E280F363E00E28FFF /* TextField.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF4874F280F363E00E28FFF /* TextField.swift in Sources */,
 				4DAD64B328075ECF007300CF /* Theme.swift in Sources */,
 				4DF4874C280F03C100E28FFF /* ButtonStyle.swift in Sources */,
 				4D9D4EBC27F4C992008BA39C /* ContentView.swift in Sources */,

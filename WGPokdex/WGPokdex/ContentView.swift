@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var texto = ""
     var body: some View {
         VStack{
-            Rectangle()
-                .fill(Color.TypeDark)
-                .frame(width: 270, height: 120)
-            Rectangle()
-                .fill(Color.TypeBug)
-                .frame(width: 270, height: 120).border(.black)
-
-        }
+            
+            CustomTextField(title: "Digite o nome do Pokemon", bindingText: $texto)
+            Button(action: {
+                print("Você pesquisou \(texto)")
+            }) {
+                Text("Pesquisar")
+            }.buttonStyle(PrimaryButtom())
+        }.background(Color.white)
             
     }
 }
