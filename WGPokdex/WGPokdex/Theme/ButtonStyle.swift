@@ -48,7 +48,7 @@ struct Buttons_Preview: PreviewProvider {
             )
             .buttonStyle(SecondaryButtom())
             
-        }.previewDevice("iPhone 8")
+        }.previewDevice("iPhone Xr")
             .previewInterfaceOrientation(.portrait)
     }
 }

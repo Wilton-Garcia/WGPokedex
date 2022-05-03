@@ -52,7 +52,7 @@ struct TextField_Preview: PreviewProvider {
             
             CustomTextField(title: "Pesquisar", bindingText: .constant(""))
             
-        }.previewDevice("iPhone 8")
+        }.previewDevice("iPhone Xr")
             .previewInterfaceOrientation(.portrait)
     }
 }
