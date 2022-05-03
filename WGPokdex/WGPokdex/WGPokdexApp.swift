@@ -11,7 +11,7 @@ import SwiftUI
 struct WGPokdexApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentPlayground()
         }
     }
 }
