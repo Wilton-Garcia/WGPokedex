@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D28B7D32816DCCA007B7427 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 4D28B7D22816DCCA007B7427 /* Apollo */; };
-		4D606061281B500500783720 /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D606060281B500500783720 /* Apollo.swift */; };
-		4D606064281B50EC00783720 /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4D606063281B50EC00783720 /* Queries.graphql */; };
+		0BAF6E6CD5B8519B5B1982DE /* Pods_WGPokdexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D96A9A5213BEA7AA1A779049 /* Pods_WGPokdexTests.framework */; };
+		4D338968282313C8002D94AE /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4D338967282313C8002D94AE /* Queries.graphql */; };
+		4D33896A28231E01002D94AE /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33896928231E01002D94AE /* Apollo.swift */; };
+		4D33896C28231E41002D94AE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33896B28231E41002D94AE /* API.swift */; };
+		4D33897028231FE8002D94AE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33896F28231FE8002D94AE /* R.generated.swift */; };
 		4D606066281B53E300783720 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D606065281B53E300783720 /* schema.json */; };
-		4D606068281B548B00783720 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D606067281B548B00783720 /* API.swift */; };
 		4D9D4EBA27F4C992008BA39C /* WGPokdexApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */; };
 		4D9D4EBC27F4C992008BA39C /* ContentPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D4EBB27F4C992008BA39C /* ContentPlayground.swift */; };
 		4D9D4EBE27F4C995008BA39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D4EBD27F4C995008BA39C /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 		4DF4874C280F03C100E28FFF /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4874B280F03C100E28FFF /* ButtonStyle.swift */; };
 		4DF4874F280F363E00E28FFF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF4874E280F363E00E28FFF /* TextField.swift */; };
 		4DF487512810890200E28FFF /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF487502810890200E28FFF /* Slider.swift */; };
+		579558E64386E176C8128ED3 /* Pods_WGPokdex_WGPokdexUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 577AF2008F33F06ED0F4BD21 /* Pods_WGPokdex_WGPokdexUITests.framework */; };
+		EAAA985F0E5569F1A6979E36 /* Pods_WGPokdex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4785E150E6424276E1659535 /* Pods_WGPokdex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D606060281B500500783720 /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
-		4D606063281B50EC00783720 /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		07D71571233C0080F81B77D8 /* Pods-WGPokdex-WGPokdexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex-WGPokdexUITests.release.xcconfig"; path = "Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1FCE3304A83FE86B4E0597AB /* Pods-WGPokdex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex.debug.xcconfig"; path = "Target Support Files/Pods-WGPokdex/Pods-WGPokdex.debug.xcconfig"; sourceTree = "<group>"; };
+		4785E150E6424276E1659535 /* Pods_WGPokdex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGPokdex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D338967282313C8002D94AE /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		4D33896928231E01002D94AE /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		4D33896B28231E41002D94AE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = WGPokdex/API.swift; sourceTree = SOURCE_ROOT; };
+		4D33896F28231FE8002D94AE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		4D606065281B53E300783720 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		4D606067281B548B00783720 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = WGPokdex/API.swift; sourceTree = SOURCE_ROOT; };
 		4D9D4EB627F4C992008BA39C /* WGPokdex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGPokdex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WGPokdexApp.swift; sourceTree = "<group>"; };
 		4D9D4EBB27F4C992008BA39C /* ContentPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentPlayground.swift; sourceTree = "<group>"; };
@@ -61,6 +68,12 @@
 		4DF4874B280F03C100E28FFF /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		4DF4874E280F363E00E28FFF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		4DF487502810890200E28FFF /* Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		577AF2008F33F06ED0F4BD21 /* Pods_WGPokdex_WGPokdexUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGPokdex_WGPokdexUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A3CADABFF5C1AC40D7C128 /* Pods-WGPokdexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdexTests.release.xcconfig"; path = "Target Support Files/Pods-WGPokdexTests/Pods-WGPokdexTests.release.xcconfig"; sourceTree = "<group>"; };
+		C1493ECCE219C55737338CD1 /* Pods-WGPokdex-WGPokdexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex-WGPokdexUITests.debug.xcconfig"; path = "Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0CC1DA09D3BF9156E43919 /* Pods-WGPokdex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex.release.xcconfig"; path = "Target Support Files/Pods-WGPokdex/Pods-WGPokdex.release.xcconfig"; sourceTree = "<group>"; };
+		D96A9A5213BEA7AA1A779049 /* Pods_WGPokdexTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGPokdexTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB432D8298A04DA0586D5F93 /* Pods-WGPokdexTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdexTests.debug.xcconfig"; path = "Target Support Files/Pods-WGPokdexTests/Pods-WGPokdexTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D28B7D32816DCCA007B7427 /* Apollo in Frameworks */,
+				EAAA985F0E5569F1A6979E36 /* Pods_WGPokdex.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BAF6E6CD5B8519B5B1982DE /* Pods_WGPokdexTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,20 +97,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				579558E64386E176C8128ED3 /* Pods_WGPokdex_WGPokdexUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D60605F281B4FEC00783720 /* GraphQL */ = {
+		4D338966282313A2002D94AE /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
-				4D606067281B548B00783720 /* API.swift */,
-				4D606060281B500500783720 /* Apollo.swift */,
-				4D606063281B50EC00783720 /* Queries.graphql */,
+				4D338967282313C8002D94AE /* Queries.graphql */,
+				4D33896928231E01002D94AE /* Apollo.swift */,
+				4D33896B28231E41002D94AE /* API.swift */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		4D33896E28231FD5002D94AE /* RSwift */ = {
+			isa = PBXGroup;
+			children = (
+				4D33896F28231FE8002D94AE /* R.generated.swift */,
+			);
+			path = RSwift;
 			sourceTree = "<group>";
 		};
 		4D9D4EAD27F4C992008BA39C = {
@@ -106,6 +129,8 @@
 				4D9D4EC927F4C995008BA39C /* WGPokdexTests */,
 				4D9D4ED327F4C995008BA39C /* WGPokdexUITests */,
 				4D9D4EB727F4C992008BA39C /* Products */,
+				DBAEBFC0C5FD87C18E3CD319 /* Pods */,
+				E796F28FD83E7B95793D2630 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,8 +147,9 @@
 		4D9D4EB827F4C992008BA39C /* WGPokdex */ = {
 			isa = PBXGroup;
 			children = (
+				4D33896E28231FD5002D94AE /* RSwift */,
+				4D338966282313A2002D94AE /* GraphQL */,
 				4D606065281B53E300783720 /* schema.json */,
-				4D60605F281B4FEC00783720 /* GraphQL */,
 				4D9D4EB927F4C992008BA39C /* WGPokdexApp.swift */,
 				4DAD64B128075EB0007300CF /* Theme */,
 				4D9D4EBB27F4C992008BA39C /* ContentPlayground.swift */,
@@ -169,6 +195,29 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		DBAEBFC0C5FD87C18E3CD319 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FCE3304A83FE86B4E0597AB /* Pods-WGPokdex.debug.xcconfig */,
+				CD0CC1DA09D3BF9156E43919 /* Pods-WGPokdex.release.xcconfig */,
+				C1493ECCE219C55737338CD1 /* Pods-WGPokdex-WGPokdexUITests.debug.xcconfig */,
+				07D71571233C0080F81B77D8 /* Pods-WGPokdex-WGPokdexUITests.release.xcconfig */,
+				FB432D8298A04DA0586D5F93 /* Pods-WGPokdexTests.debug.xcconfig */,
+				81A3CADABFF5C1AC40D7C128 /* Pods-WGPokdexTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E796F28FD83E7B95793D2630 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4785E150E6424276E1659535 /* Pods_WGPokdex.framework */,
+				577AF2008F33F06ED0F4BD21 /* Pods_WGPokdex_WGPokdexUITests.framework */,
+				D96A9A5213BEA7AA1A779049 /* Pods_WGPokdexTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,19 +225,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9D4EDA27F4C995008BA39C /* Build configuration list for PBXNativeTarget "WGPokdex" */;
 			buildPhases = (
-				4D60605C281B4F6A00783720 /* Generate Apollo GraphQL API */,
+				052B8D1C5CABA33B477BC2BE /* [CP] Check Pods Manifest.lock */,
+				4D338965282312FB002D94AE /* GraphQL */,
+				4D33896D28231EE7002D94AE /* RSwift */,
 				4D9D4EB227F4C992008BA39C /* Sources */,
 				4D9D4EB327F4C992008BA39C /* Frameworks */,
 				4D9D4EB427F4C992008BA39C /* Resources */,
+				418384E329612A0BD69361AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = WGPokdex;
-			packageProductDependencies = (
-				4D28B7D22816DCCA007B7427 /* Apollo */,
-			);
 			productName = WGPokdex;
 			productReference = 4D9D4EB627F4C992008BA39C /* WGPokdex.app */;
 			productType = "com.apple.product-type.application";
@@ -197,6 +246,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9D4EDD27F4C995008BA39C /* Build configuration list for PBXNativeTarget "WGPokdexTests" */;
 			buildPhases = (
+				C260C529AB9911E01875BD6C /* [CP] Check Pods Manifest.lock */,
 				4D9D4EC227F4C995008BA39C /* Sources */,
 				4D9D4EC327F4C995008BA39C /* Frameworks */,
 				4D9D4EC427F4C995008BA39C /* Resources */,
@@ -215,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D9D4EE027F4C995008BA39C /* Build configuration list for PBXNativeTarget "WGPokdexUITests" */;
 			buildPhases = (
+				D2C82AB7E9172932E0833D2B /* [CP] Check Pods Manifest.lock */,
 				4D9D4ECC27F4C995008BA39C /* Sources */,
 				4D9D4ECD27F4C995008BA39C /* Frameworks */,
 				4D9D4ECE27F4C995008BA39C /* Resources */,
+				EF889E63A29680960D2D91C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,9 +313,6 @@
 				Base,
 			);
 			mainGroup = 4D9D4EAD27F4C992008BA39C;
-			packageReferences = (
-				4D28B7D12816DCCA007B7427 /* XCRemoteSwiftPackageReference "apollo-ios" */,
-			);
 			productRefGroup = 4D9D4EB727F4C992008BA39C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,7 +331,7 @@
 			files = (
 				4D606066281B53E300783720 /* schema.json in Resources */,
 				4D9D4EC127F4C995008BA39C /* Preview Assets.xcassets in Resources */,
-				4D606064281B50EC00783720 /* Queries.graphql in Resources */,
+				4D338968282313C8002D94AE /* Queries.graphql in Resources */,
 				4D9D4EBE27F4C995008BA39C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +353,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D60605C281B4F6A00783720 /* Generate Apollo GraphQL API */ = {
+		052B8D1C5CABA33B477BC2BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WGPokdex-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		418384E329612A0BD69361AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGPokdex/Pods-WGPokdex-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGPokdex/Pods-WGPokdex-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WGPokdex/Pods-WGPokdex-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D338965282312FB002D94AE /* GraphQL */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = GraphQL;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+		};
+		4D33896D28231EE7002D94AE /* RSwift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,14 +419,76 @@
 			);
 			inputPaths = (
 			);
-			name = "Generate Apollo GraphQL API";
+			name = RSwift;
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\n\n# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		C260C529AB9911E01875BD6C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WGPokdexTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2C82AB7E9172932E0833D2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WGPokdex-WGPokdexUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF889E63A29680960D2D91C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -331,11 +499,12 @@
 			files = (
 				4DF4874F280F363E00E28FFF /* TextField.swift in Sources */,
 				4DAD64B328075ECF007300CF /* Theme.swift in Sources */,
+				4D33897028231FE8002D94AE /* R.generated.swift in Sources */,
 				4DF4874C280F03C100E28FFF /* ButtonStyle.swift in Sources */,
-				4D606061281B500500783720 /* Apollo.swift in Sources */,
+				4D33896A28231E01002D94AE /* Apollo.swift in Sources */,
 				4D9D4EBC27F4C992008BA39C /* ContentPlayground.swift in Sources */,
 				4DF487512810890200E28FFF /* Slider.swift in Sources */,
-				4D606068281B548B00783720 /* API.swift in Sources */,
+				4D33896C28231E41002D94AE /* API.swift in Sources */,
 				4D9D4EBA27F4C992008BA39C /* WGPokdexApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +658,7 @@
 		};
 		4D9D4EDB27F4C995008BA39C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FCE3304A83FE86B4E0597AB /* Pods-WGPokdex.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +688,7 @@
 		};
 		4D9D4EDC27F4C995008BA39C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0CC1DA09D3BF9156E43919 /* Pods-WGPokdex.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -547,6 +718,7 @@
 		};
 		4D9D4EDE27F4C995008BA39C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB432D8298A04DA0586D5F93 /* Pods-WGPokdexTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -567,6 +739,7 @@
 		};
 		4D9D4EDF27F4C995008BA39C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81A3CADABFF5C1AC40D7C128 /* Pods-WGPokdexTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -587,6 +760,7 @@
 		};
 		4D9D4EE127F4C995008BA39C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1493ECCE219C55737338CD1 /* Pods-WGPokdex-WGPokdexUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -605,6 +779,7 @@
 		};
 		4D9D4EE227F4C995008BA39C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07D71571233C0080F81B77D8 /* Pods-WGPokdex-WGPokdexUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,25 +836,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4D28B7D12816DCCA007B7427 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:apollographql/apollo-ios.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4D28B7D22816DCCA007B7427 /* Apollo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4D28B7D12816DCCA007B7427 /* XCRemoteSwiftPackageReference "apollo-ios" */;
-			productName = Apollo;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4D9D4EAE27F4C992008BA39C /* Project object */;
 }
