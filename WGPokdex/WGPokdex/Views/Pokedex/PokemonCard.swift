@@ -11,12 +11,15 @@ import SwiftUI
 import Rswift
 
 struct PokemonCard: View {
-    private let imageName = Images.badgeDark
+    let pokemonNumber: Int
+    let pokemonName: String
+    let mainPokemonType: Int
+    let secondaryPokemonType: Int?
        var body: some View {
            VStack(alignment: .leading) {
                ZStack(alignment: .leading) {
                    Rectangle()
-                       .fill(Color.BackgroundTypeGrass)
+                       .fill(PokemonBackgroundColor.Ptype(id: mainPokemonType))
                        .frame(width: 334, height: 115)
                        .cornerRadius(20)
                    Image(Images.patternSixByThree)
@@ -26,13 +29,13 @@ struct PokemonCard: View {
                        .offset(x: 100, y: -35)
                    HStack{
                        VStack(alignment: .leading, spacing: 1) {
-                           Text("#0000").font(.caption)
-                           Text("POKEMON")
+                           Text("#0\(pokemonNumber)").font(.caption)
+                           Text(pokemonName)
                                .fontWeight(.heavy)
                                .foregroundColor(Color.BackgroundWhite)
                            HStack{
-                                Image(Images.badgeGrass)
-                               Image(Badge.Ptype(id: 1))
+                               Image(Badge.Ptype(id: mainPokemonType))
+                               Image(Badge.Ptype(id: secondaryPokemonType ?? 0))
                            }
                        }.padding()
                     ZStack(alignment: .trailing) {
@@ -40,8 +43,23 @@ struct PokemonCard: View {
                                .resizable()
                                .frame(width: 145, height: 145)
                                .foregroundColor(Color.BackgroundWhite.opacity(0.3))
-                           Image(R.image.bulbasaur)
-                                .offset(x: -20, y: -16)
+                        AsyncImage(url: PokemonImage.ArtWork(id: pokemonNumber)) { phase in
+                                if let image = phase.image {
+                                    image
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 130 , height: 130)
+                                    
+                                } else if phase.error != nil {
+                                        Color.red
+                                            .frame(width: 130 , height: 130)
+                                } else {
+                                    Image(Images.pokebola)
+                                        .resizable()
+                                        .frame(width: 130 , height: 130)
+                                    }
+                                }
+                                    .offset(x: -20, y: -16)
                        }
                     .offset(x: 23)
                 }
@@ -49,10 +67,9 @@ struct PokemonCard: View {
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonCard()
+        PokemonCard(pokemonNumber: 1, pokemonName: "Pokemon", mainPokemonType: 12, secondaryPokemonType: 4)
             .previewDevice("iPhone 12")
     }
 }

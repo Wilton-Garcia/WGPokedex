@@ -48,7 +48,7 @@ struct TextField_Preview: PreviewProvider {
     
     static var previews: some View {
         VStack{
-            CustomTextField(title: "Text Field", bindingText: .constant(""))
+            CustomTextField(title: "What Pokémon are you looking for?", bindingText: .constant(""))
             
             CustomTextField(title: "Pesquisar", bindingText: .constant(""))
             
