@@ -13,9 +13,8 @@ import Rswift
 struct PokemonCard: View {
     private let imageName = Images.badgeDark
        var body: some View {
-           VStack(alignment: .leading){
-               ZStack(alignment: .leading){
-                  
+           VStack(alignment: .leading) {
+               ZStack(alignment: .leading) {
                    Rectangle()
                        .fill(Color.BackgroundTypeGrass)
                        .frame(width: 334, height: 115)
@@ -26,23 +25,25 @@ struct PokemonCard: View {
                        .foregroundColor(Color.BackgroundWhite.opacity(0.3))
                        .offset(x: 100, y: -35)
                    HStack{
-                   VStack(alignment: .leading, spacing: 1){
-                       Text("#0001").font(.caption)
-                       Text("POKEMON")
-                           .fontWeight(.heavy)
-                           .foregroundColor(Color.BackgroundWhite)
-                       HStack{
-                           Image(Images.badgeGrass)
-                           Image(Images.badgePoison)
-                       }
-                }.padding()
-                       ZStack(alignment: .trailing){
+                       VStack(alignment: .leading, spacing: 1) {
+                           Text("#0000").font(.caption)
+                           Text("POKEMON")
+                               .fontWeight(.heavy)
+                               .foregroundColor(Color.BackgroundWhite)
+                           HStack{
+                                Image(Images.badgeGrass)
+                               Image(Badge.Ptype(id: 1))
+                           }
+                       }.padding()
+                    ZStack(alignment: .trailing) {
                            Image(Images.patternPokeball)
                                .resizable()
                                .frame(width: 145, height: 145)
                                .foregroundColor(Color.BackgroundWhite.opacity(0.3))
-                           Image(R.image.bulbasaur).offset(x: -20, y: -16)
-                       }.offset(x: 23)
+                           Image(R.image.bulbasaur)
+                                .offset(x: -20, y: -16)
+                       }
+                    .offset(x: 23)
                 }
             }
         }
@@ -52,5 +53,6 @@ struct PokemonCard: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         PokemonCard()
+            .previewDevice("iPhone 12")
     }
 }
