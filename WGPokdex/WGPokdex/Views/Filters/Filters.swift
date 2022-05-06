@@ -9,7 +9,23 @@ import SwiftUI
 
 struct Filters: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack{
+            Button(action: {
+                print("OP1")
+            }) {
+                Image(Images.iconMenuGenerations)
+            }
+            Button(action: {
+                print("OP2")
+            }) {
+                Image(Images.iconMenuSort)
+            }
+            Button(action: {
+                print("OP3")
+            }) {
+                Image(Images.iconMenuFilter)
+            }
+        }
     }
 }
 

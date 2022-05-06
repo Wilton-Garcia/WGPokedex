@@ -70,6 +70,6 @@ struct PokemonCard: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         PokemonCard(pokemonNumber: 1, pokemonName: "Pokemon", mainPokemonType: 12, secondaryPokemonType: 4)
-            .previewDevice("iPhone 12")
+            .previewDevice("iPhone 11")
     }
 }

@@ -13,7 +13,7 @@ class PokedexViewModel: ObservableObject{
     @Published var pokedex: [PokedexQuery.Data.PokemonV2Pokemon] = []
     
     func loadPokemons(limit: Int){
-        Network.shared.apollo.fetch(query: PokedexQuery(limit: 25)){ result in
+        Network.shared.apollo.fetch(query: PokedexQuery(limit: 151)){ result in
         switch result {
             case .success(let pokedexResult):
                 DispatchQueue.main.async {

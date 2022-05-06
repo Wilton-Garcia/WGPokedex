@@ -12,7 +12,11 @@ struct PokedexView: View {
     @State private var pokemonText = ""
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 10){
+        VStack(alignment: .leading, spacing: 15){
+            HStack{
+                Spacer()
+            Filters().padding(.trailing, 10)
+            }
             Text("Pokédex")
                 .font(.title)
                 .fontWeight(.heavy)
@@ -29,15 +33,25 @@ struct PokedexView: View {
                         secondaryPokemonType: pokemon.pokemonV2Pokemontypes[safe: 1]?.pokemonV2Type?.id ?? 0)
                 }
             }
-        }.onAppear{
-         //   viewModel.loadPokemons(limit: 0)
-        }.padding()
+        }
+        .padding(30)
+        .onAppear{
+            viewModel.loadPokemons(limit: 0)
+        }.background(content: {
+            Image(Images.patternPokeball)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(Color.TextGray)
+                .opacity(0.3)
+                .offset(y: -430)
+        })
     }
 }
 
 struct PokedexCardView_Previews: PreviewProvider {
     static var previews: some View {
         PokedexView()
-            .previewDevice("iPhone 12")
+            .previewDevice("iPhone Xr")
+            
     }
 }

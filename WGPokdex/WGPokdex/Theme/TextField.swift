@@ -20,6 +20,7 @@ struct CustomTextField: View{
                 .padding(.leading, 10)
                 .padding(.vertical, 20)
             TextField(title, text: bindingText)
+                .font(Font.system(size: 14))
                 .focused($isFocused)
                 .padding(.vertical, 10)
                 .padding(.trailing, 30)
