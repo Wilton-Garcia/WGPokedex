@@ -20,6 +20,7 @@ struct CustomTextField: View{
                 .padding(.leading, 10)
                 .padding(.vertical, 20)
             TextField(title, text: bindingText)
+                .font(Font.system(size: 14))
                 .focused($isFocused)
                 .padding(.vertical, 10)
                 .padding(.trailing, 30)
@@ -48,7 +49,7 @@ struct TextField_Preview: PreviewProvider {
     
     static var previews: some View {
         VStack{
-            CustomTextField(title: "Text Field", bindingText: .constant(""))
+            CustomTextField(title: "What Pokémon are you looking for?", bindingText: .constant(""))
             
             CustomTextField(title: "Pesquisar", bindingText: .constant(""))
             
