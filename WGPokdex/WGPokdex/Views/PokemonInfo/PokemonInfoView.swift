@@ -49,6 +49,17 @@ struct PokemonInfoView: View {
                     }
                 }
             }
+            TabView{
+                PokemonInfoAbout().tabItem{
+                    Label("About", systemImage: "list.dash")
+                }
+                PokemonInfoAbout().tabItem{
+                    Label("Stats", systemImage: "list.dash")
+                }
+                PokemonInfoAbout().tabItem{
+                    Label("Evolution", systemImage: "list.dash")
+                }
+            }.cornerRadius(20)
         }.frame(
             minWidth: 0,
             maxWidth: .infinity,
