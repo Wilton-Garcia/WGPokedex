@@ -12,6 +12,7 @@ struct PokedexView: View {
     @State private var pokemonText = ""
     
     var body: some View {
+        NavigationView{
         VStack(alignment: .leading, spacing: 15){
             HStack{
                 Spacer()
@@ -24,16 +25,19 @@ struct PokedexView: View {
                 .font(.headline)
                 .lineLimit(2).foregroundColor(Color.TextGray)
             CustomTextField(title: "What Pokémon are you looking for?", bindingText: $pokemonText)
-            ScrollView{
-                ForEach(viewModel.pokedex, id: \.id) { pokemon in
-                    PokemonCard(
-                        pokemonNumber: pokemon.id,
-                        pokemonName: pokemon.name,
-                        mainPokemonType: pokemon.pokemonV2Pokemontypes[safe: 0]?.pokemonV2Type?.id ?? 0,
-                        secondaryPokemonType: pokemon.pokemonV2Pokemontypes[safe: 1]?.pokemonV2Type?.id ?? 0)
+           
+                ScrollView{
+                    ForEach(viewModel.pokedex, id: \.id) { pokemon in
+                        NavigationPokemonCard(
+                            pokemonNumber: pokemon.id,
+                            pokemonName: pokemon.name,
+                            mainPokemonType: pokemon.pokemonV2Pokemontypes[safe: 0]?.pokemonV2Type?.id ?? 0,
+                            secondaryPokemonType: pokemon.pokemonV2Pokemontypes[safe: 1]?.pokemonV2Type?.id ?? 0)
+                        }
+                    }
                 }
-            }
-        }
+       
+        
         .padding(30)
         .onAppear{
             viewModel.loadPokemons(limit: 0)
@@ -45,6 +49,7 @@ struct PokedexView: View {
                 .opacity(0.3)
                 .offset(y: -430)
         })
+    }
     }
 }
 
