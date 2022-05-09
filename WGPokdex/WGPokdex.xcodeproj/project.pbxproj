@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0BAF6E6CD5B8519B5B1982DE /* Pods_WGPokdexTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D96A9A5213BEA7AA1A779049 /* Pods_WGPokdexTests.framework */; };
+		4D25DD8228298C0D00FA5D3F /* PokemonInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D25DD8128298C0D00FA5D3F /* PokemonInfoView.swift */; };
 		4D338968282313C8002D94AE /* Queries.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 4D338967282313C8002D94AE /* Queries.graphql */; };
 		4D33896A28231E01002D94AE /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33896928231E01002D94AE /* Apollo.swift */; };
 		4D33896C28231E41002D94AE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33896B28231E41002D94AE /* API.swift */; };
@@ -56,6 +57,7 @@
 		07D71571233C0080F81B77D8 /* Pods-WGPokdex-WGPokdexUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex-WGPokdexUITests.release.xcconfig"; path = "Target Support Files/Pods-WGPokdex-WGPokdexUITests/Pods-WGPokdex-WGPokdexUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1FCE3304A83FE86B4E0597AB /* Pods-WGPokdex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGPokdex.debug.xcconfig"; path = "Target Support Files/Pods-WGPokdex/Pods-WGPokdex.debug.xcconfig"; sourceTree = "<group>"; };
 		4785E150E6424276E1659535 /* Pods_WGPokdex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGPokdex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D25DD8128298C0D00FA5D3F /* PokemonInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonInfoView.swift; sourceTree = "<group>"; };
 		4D338967282313C8002D94AE /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
 		4D33896928231E01002D94AE /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		4D33896B28231E41002D94AE /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = WGPokdex/API.swift; sourceTree = SOURCE_ROOT; };
@@ -118,6 +120,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D25DD8028298BEF00FA5D3F /* PokemonInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4D25DD8128298C0D00FA5D3F /* PokemonInfoView.swift */,
+			);
+			path = PokemonInfo;
+			sourceTree = "<group>";
+		};
 		4D338966282313A2002D94AE /* GraphQL */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		4D33897C28244507002D94AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D25DD8028298BEF00FA5D3F /* PokemonInfo */,
 				4D33898528246D2B002D94AE /* Filters */,
 				4D33897D28244C20002D94AE /* Pokedex */,
 			);
@@ -582,6 +593,7 @@
 				4DAD64B328075ECF007300CF /* Theme.swift in Sources */,
 				4D33897028231FE8002D94AE /* R.generated.swift in Sources */,
 				4DF4874C280F03C100E28FFF /* ButtonStyle.swift in Sources */,
+				4D25DD8228298C0D00FA5D3F /* PokemonInfoView.swift in Sources */,
 				4D33896A28231E01002D94AE /* Apollo.swift in Sources */,
 				4D9D4EBC27F4C992008BA39C /* PokemonCard.swift in Sources */,
 				4D33897928240BA9002D94AE /* TypesByID.swift in Sources */,
