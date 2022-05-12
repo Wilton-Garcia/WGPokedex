@@ -48,18 +48,20 @@ struct PokemonInfoView: View {
                         Image(Badge.Ptype(id: secondaryPokemonType ?? 0))
                     }
                 }
-            }
+            }.padding()
             TabView{
-                PokemonInfoAbout().tabItem{
+                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
                     Label("About", systemImage: "list.dash")
                 }
-                PokemonInfoAbout().tabItem{
+                PokemonInfoStats().tabItem{
                     Label("Stats", systemImage: "list.dash")
                 }
-                PokemonInfoAbout().tabItem{
+                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
                     Label("Evolution", systemImage: "list.dash")
                 }
-            }.cornerRadius(20)
+            }.cornerRadius(30.0, corners: .topLeft)
+                .cornerRadius(30.0, corners: .topRight)
+                
         }.frame(
             minWidth: 0,
             maxWidth: .infinity,
