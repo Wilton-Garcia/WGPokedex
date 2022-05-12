@@ -50,7 +50,7 @@ struct PokemonInfoView: View {
                     }
                 }
             }.padding()
-            CustomTabView(pokemonInfoViewManager: PokemonInfoViewManager())
+            CustomTabView(pokemonId: pokemonNumber, pokemonInfoViewManager: PokemonInfoViewManager())
 //
 //            TabView{
 //                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{

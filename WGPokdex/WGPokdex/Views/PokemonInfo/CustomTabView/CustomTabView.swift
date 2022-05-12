@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CustomTabView: View {
-    
+    let pokemonId: Int
     @StateObject var pokemonInfoViewManager: PokemonInfoViewManager
     
     var body: some View {
@@ -23,7 +23,7 @@ struct CustomTabView: View {
                 Spacer()
                 switch pokemonInfoViewManager.currentView{
                  case .about:
-                    PokemonInfoAboutView(pokemonId: 1)
+                    PokemonInfoAboutView(pokemonId: pokemonId)
                  case .stats:
                     PokemonInfoStats()
                  case .evolution:
@@ -36,6 +36,6 @@ struct CustomTabView: View {
 
 struct CustomTabView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTabView(pokemonInfoViewManager: PokemonInfoViewManager()).previewDevice("iPhone Xʀ")
+        CustomTabView(pokemonId: 1, pokemonInfoViewManager: PokemonInfoViewManager()).previewDevice("iPhone Xʀ")
     }
 }
