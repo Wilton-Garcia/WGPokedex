@@ -12,19 +12,19 @@ struct PokemonInfoAboutView: View {
     @StateObject var viewModel = PokemonInfoAboutViewModel.shared
     var body: some View {
         ScrollView{
-            VStack{
+            VStack(alignment: .leading){
                 Text(viewModel.pokemonDescription).padding()
                 Text("Pokédex Data").font(.title)
                    
                 HStack{
-                    VStack(spacing: 15){
+                    VStack(alignment: .leading, spacing: 15){
 //                        Text("Species")
                         Text("Height")
                         Text("Weight")
 //                        Text("Abilities")
 //                        Text("Weaknes")
                     }
-                    .frame(width: 200)
+                    Spacer()
     
                     VStack(alignment: .leading, spacing: 15){
 //                        Text("DATA")
@@ -38,7 +38,7 @@ struct PokemonInfoAboutView: View {
 //                            Image(Images.iconTypePsychic)
 //                       }
                     }
-                    .frame(width: 180)
+
                    
                 }
 //                Text("Training").font(.title)

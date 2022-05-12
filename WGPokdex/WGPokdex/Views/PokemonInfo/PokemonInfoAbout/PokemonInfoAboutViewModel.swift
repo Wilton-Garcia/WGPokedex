@@ -25,14 +25,17 @@ class PokemonInfoAboutViewModel: ObservableObject{
                         if let pokemonDescrptionData = pokemonResult.data?.description[safe: 0]?.flavorText,
                            let pokemonHeightData = pokemonResult.data?.pokemonData?.height,
                            let pokemonWeightData = pokemonResult.data?.pokemonData?.weight,
-                           let primaryPokemonTypeData = pokemonResult.data?.pokemonData?.types[safe: 0]?.type?.id,
-                           let secondaryPokemonTypeData = pokemonResult.data?.pokemonData?.types[safe: 1]?.type?.id
+                           let primaryPokemonTypeData = pokemonResult.data?.pokemonData?.types[safe: 0]?.type?.id
                         {
+                            
                             self.pokemonDescription = pokemonDescrptionData.replacingOccurrences(of: "\n", with: "" )
-                            self.pokemonHeight = pokemonHeightData
+                            self.pokemonHeight = pokemonHeightData*10
                             self.pokemonWeight = Double(pokemonWeightData)/10.0
                             self.primaryPokemonType = primaryPokemonTypeData
-                            self.secondaryPokemonType = secondaryPokemonTypeData
+                            
+                            if let secondaryPokemonTypeData = pokemonResult.data?.pokemonData?.types[safe: 1]?.type?.id {
+                                self.secondaryPokemonType = secondaryPokemonTypeData
+                            }
                         }
                            
                     }
