@@ -12,6 +12,7 @@ struct PokemonInfoView: View {
     let pokemonName: String
     let mainPokemonType: Int
     let secondaryPokemonType: Int?
+    @StateObject var pokemonInfoViewManeger = PokemonInfoViewManager()
     var body: some View {
         VStack{
             HStack{
@@ -49,19 +50,21 @@ struct PokemonInfoView: View {
                     }
                 }
             }.padding()
-            TabView{
-                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
-                    Label("About", systemImage: "list.dash")
-                }
-                PokemonInfoStats().tabItem{
-                    Label("Stats", systemImage: "list.dash")
-                }
-                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
-                    Label("Evolution", systemImage: "list.dash")
-                }
-            }.cornerRadius(30.0, corners: .topLeft)
-                .cornerRadius(30.0, corners: .topRight)
-                
+            CustomTabView(pokemonInfoViewManager: PokemonInfoViewManager())
+//
+//            TabView{
+//                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
+//                    Label("About", systemImage: "list.dash")
+//                }
+//                PokemonInfoStats().tabItem{
+//                    Label("Stats", systemImage: "list.dash")
+//                }
+//                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
+//                    Label("Evolution", systemImage: "list.dash")
+//                }
+//            }.cornerRadius(30.0, corners: .topLeft)
+//                .cornerRadius(30.0, corners: .topRight)
+//
         }.frame(
             minWidth: 0,
             maxWidth: .infinity,

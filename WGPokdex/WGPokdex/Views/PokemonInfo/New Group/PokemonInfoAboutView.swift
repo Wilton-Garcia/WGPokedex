@@ -95,7 +95,9 @@ struct PokemonInfoAboutView: View {
 //                    }
 //                }
             }.padding(10)
-        }.onAppear{
+        }
+        .background(Color.white)
+        .onAppear{
             viewModel.loadPokemonData(pokemonId: pokemonId)
         }
     }
