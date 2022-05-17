@@ -51,20 +51,6 @@ struct PokemonInfoView: View {
                 }
             }.padding()
             CustomTabView(pokemonId: pokemonNumber, pokemonInfoViewManager: PokemonInfoViewManager())
-//
-//            TabView{
-//                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
-//                    Label("About", systemImage: "list.dash")
-//                }
-//                PokemonInfoStats().tabItem{
-//                    Label("Stats", systemImage: "list.dash")
-//                }
-//                PokemonInfoAboutView(pokemonId: pokemonNumber).tabItem{
-//                    Label("Evolution", systemImage: "list.dash")
-//                }
-//            }.cornerRadius(30.0, corners: .topLeft)
-//                .cornerRadius(30.0, corners: .topRight)
-//
         }.frame(
             minWidth: 0,
             maxWidth: .infinity,

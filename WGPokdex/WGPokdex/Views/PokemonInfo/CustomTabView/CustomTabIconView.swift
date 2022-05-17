@@ -18,9 +18,13 @@ struct CustomTabIconView: View{
         VStack {
             Text(tabText)
                 .font(.title2)
-                .padding()
+                .bold()
+                .padding(.top, 20)
+                .padding(.horizontal)
             Spacer()
         }
+        .background(Image(Images.patternPokeball).opacity(0.3).offset(y: 26))
+        .foregroundColor(pokemonInfoViewManager.currentView == assignedView ? Color.white : Color.TextGray)
         .onTapGesture {
             print(pokemonInfoViewManager.currentView)
             pokemonInfoViewManager.currentView = assignedView

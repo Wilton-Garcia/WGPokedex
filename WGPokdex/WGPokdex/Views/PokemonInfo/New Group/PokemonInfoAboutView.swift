@@ -14,7 +14,7 @@ struct PokemonInfoAboutView: View {
         ScrollView{
             VStack(alignment: .leading){
                 Text(viewModel.pokemonDescription).padding()
-                Text("Pokédex Data").font(.title)
+                Text("Pokédex Data").font(.title).padding()
                    
                 HStack{
                     VStack(alignment: .leading, spacing: 15){
@@ -96,10 +96,12 @@ struct PokemonInfoAboutView: View {
 //                }
             }.padding(10)
         }
+       
         .background(Color.white)
         .onAppear{
             viewModel.loadPokemonData(pokemonId: pokemonId)
-        }
+        }.cornerRadius(30.0, corners: .topLeft)
+        .cornerRadius(30.0, corners: .topRight)
     }
 }
 

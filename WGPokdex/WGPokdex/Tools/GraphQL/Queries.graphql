@@ -38,7 +38,7 @@ query PokemonInfo($id: Int!) {
   Status: pokemon_v2_pokemon_by_pk(id: $id) {
     Stats: pokemon_v2_pokemonstats {
       id
-      base_stat
+      Valor: base_stat
     }
   }
   Evolutions: pokemon_v2_pokemonspecies_by_pk(id: $id) {
@@ -49,4 +49,3 @@ query PokemonInfo($id: Int!) {
     }
   }
 }
-

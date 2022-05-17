@@ -353,7 +353,7 @@ public final class PokemonInfoQuery: GraphQLQuery {
         Stats: pokemon_v2_pokemonstats {
           __typename
           id
-          base_stat
+          Valor: base_stat
         }
       }
       Evolutions: pokemon_v2_pokemonspecies_by_pk(id: $id) {
@@ -697,7 +697,7 @@ public final class PokemonInfoQuery: GraphQLQuery {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
             GraphQLField("id", type: .nonNull(.scalar(Int.self))),
-            GraphQLField("base_stat", type: .nonNull(.scalar(Int.self))),
+            GraphQLField("base_stat", alias: "Valor", type: .nonNull(.scalar(Int.self))),
           ]
         }
 
@@ -707,8 +707,8 @@ public final class PokemonInfoQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(id: Int, baseStat: Int) {
-          self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemonstat", "id": id, "base_stat": baseStat])
+        public init(id: Int, valor: Int) {
+          self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemonstat", "id": id, "Valor": valor])
         }
 
         public var __typename: String {
@@ -729,12 +729,12 @@ public final class PokemonInfoQuery: GraphQLQuery {
           }
         }
 
-        public var baseStat: Int {
+        public var valor: Int {
           get {
-            return resultMap["base_stat"]! as! Int
+            return resultMap["Valor"]! as! Int
           }
           set {
-            resultMap.updateValue(newValue, forKey: "base_stat")
+            resultMap.updateValue(newValue, forKey: "Valor")
           }
         }
       }

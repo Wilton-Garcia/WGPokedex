@@ -16,8 +16,14 @@ struct CustomTabView: View {
             VStack{
                 HStack{
                     CustomTabIconView(assignedView: .about, width: geometry.size.width/3, height: geometry.size.height/20, tabText: "About", pokemonInfoViewManager: pokemonInfoViewManager)
+                            .cornerRadius(30.0, corners: .topLeft)
+                            .cornerRadius(30.0, corners: .topRight)
                     CustomTabIconView(assignedView: .stats,width: geometry.size.width/3, height: geometry.size.height/20, tabText: "Stats", pokemonInfoViewManager: pokemonInfoViewManager)
+                            .cornerRadius(30.0, corners: .topLeft)
+                            .cornerRadius(30.0, corners: .topRight)
                     CustomTabIconView(assignedView: .evolution, width: geometry.size.width/3, height: geometry.size.height/20, tabText: "Evolution", pokemonInfoViewManager: pokemonInfoViewManager)
+                            .cornerRadius(30.0, corners: .topLeft)
+                            .cornerRadius(30.0, corners: .topRight)
                 }.frame(width: geometry.size.width, height: geometry.size.height/12)
    
                 Spacer()
@@ -25,7 +31,7 @@ struct CustomTabView: View {
                  case .about:
                     PokemonInfoAboutView(pokemonId: pokemonId)
                  case .stats:
-                    PokemonInfoStats()
+                    PokemonInfoStatsView(pokemonId: pokemonId)
                  case .evolution:
                     Text("Evolution").background(Color.BackgroundTypeWater)
                 }
