@@ -35,13 +35,14 @@ struct PokemonInfoStatsView: View {
     
                 Spacer()
                 VStack(alignment: .leading){
-                    Text("0")
-                    Text("0")
-                    Text("0")
-                    Text("0")
-                    Text("0")
-                    Text("0")
-                }
+                    StatBar(value: viewModel.baseHp, maxValue: viewModel.maxHp, colorType: viewModel.mainPokemonType).padding(.horizontal)
+                    StatBar(value: viewModel.baseAttack, maxValue: viewModel.maxAttack, colorType: viewModel.mainPokemonType).padding(.horizontal)
+                    StatBar(value: viewModel.baseDefense, maxValue: viewModel.maxDefense, colorType: viewModel.mainPokemonType).padding(.horizontal)
+                    StatBar(value: viewModel.baseSpAttack, maxValue: viewModel.maxSpAttack, colorType: viewModel.mainPokemonType).padding(.horizontal)
+                    StatBar(value: viewModel.baseSpDeffense, maxValue: viewModel.maxSpDeffense, colorType: viewModel.mainPokemonType).padding(.horizontal)
+                    StatBar(value: viewModel.baseSpeed, maxValue: viewModel.maxSpeed, colorType: viewModel.mainPokemonType).padding(.horizontal)
+           
+                }.foregroundColor(PokemonColor.Ptype(id: viewModel.mainPokemonType))
                 Spacer()
                 VStack(alignment: .leading){
                     Text("\(viewModel.maxMinHp)")
@@ -80,6 +81,6 @@ struct PokemonInfoStatsView: View {
 
 struct PokemonInfoStats_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonInfoStatsView(pokemonId: 7)
+        PokemonInfoStatsView(pokemonId: 1)
     }
 }

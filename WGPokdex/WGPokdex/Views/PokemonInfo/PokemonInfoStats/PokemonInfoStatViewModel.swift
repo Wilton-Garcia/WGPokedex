@@ -11,6 +11,8 @@ class PokemonInfoStatsViewModel: ObservableObject{
     static let shared  = PokemonInfoStatsViewModel()
     
     
+    @Published var mainPokemonType = 0
+    
     @Published var baseHp = 0
     @Published var baseAttack = 0
     @Published var baseDefense = 0
@@ -19,19 +21,19 @@ class PokemonInfoStatsViewModel: ObservableObject{
     @Published var baseSpeed = 0
     
     
-    @Published var maxMinHp = 0
-    @Published var maxMinAttack = 0
-    @Published var maxMinDefense = 0
-    @Published var maxMinSpAttack = 0
-    @Published var maxMinSpDeffense = 0
-    @Published var maxMinSpeed = 0
+    @Published var maxMinHp = 1
+    @Published var maxMinAttack = 1
+    @Published var maxMinDefense = 1
+    @Published var maxMinSpAttack = 1
+    @Published var maxMinSpDeffense = 1
+    @Published var maxMinSpeed = 1
     
-    @Published var maxHp = 0
-    @Published var maxAttack = 0
-    @Published var maxDefense = 0
-    @Published var maxSpAttack = 0
-    @Published var maxSpDeffense = 0
-    @Published var maxSpeed = 0
+    @Published var maxHp = 1
+    @Published var maxAttack = 1
+    @Published var maxDefense = 1
+    @Published var maxSpAttack = 1
+    @Published var maxSpDeffense = 1
+    @Published var maxSpeed = 1
     
     
     func loadPokemonData(pokemonId: Int){
@@ -39,7 +41,8 @@ class PokemonInfoStatsViewModel: ObservableObject{
                 switch result{
                 case .success(let pokemonResult):
                     DispatchQueue.main.async {
-                        if let pokemonStatus = pokemonResult.data?.status?.stats
+                        if let pokemonStatus = pokemonResult.data?.status?.stats,
+                           let mainPokemonType = pokemonResult.data?.pokemonData?.types[safe: 0]?.type?.id
                         {
                             self.baseHp = pokemonStatus[0].valor
                             self.baseAttack = pokemonStatus[1].valor
@@ -59,6 +62,8 @@ class PokemonInfoStatsViewModel: ObservableObject{
                             self.maxMinSpAttack = self.calcMaxMinStatus(baseStat: pokemonStatus[3].valor)
                             self.maxMinSpDeffense = self.calcMaxMinStatus(baseStat: pokemonStatus[4].valor)
                             self.maxMinSpeed = self.calcMaxMinStatus(baseStat: pokemonStatus[5].valor)
+                            
+                            self.mainPokemonType = mainPokemonType
                         }
 
                     }
@@ -83,7 +88,7 @@ class PokemonInfoStatsViewModel: ObservableObject{
     }
     
     private func calcMaxMinStatus(baseStat: Int) -> Int{
-        var maxMinStat = Double((baseStat * 2 + 5)) * 0.9
+        var maxMinStat = Double(baseStat * 2 + 5) * 0.9
         maxMinStat.round(.down)
         return Int(maxMinStat)
     }

@@ -23,7 +23,11 @@ struct CustomTabIconView: View{
                 .padding(.horizontal)
             Spacer()
         }
-        .background(Image(Images.patternPokeball).opacity(0.3).offset(y: 26))
+        .background(
+            Image(Images.patternPokeball)
+                    .opacity(0.3)
+                    .offset(y: 26)
+        )
         .foregroundColor(pokemonInfoViewManager.currentView == assignedView ? Color.white : Color.TextGray)
         .onTapGesture {
             print(pokemonInfoViewManager.currentView)
