@@ -14,6 +14,10 @@ struct PokemonInfoStatsView: View {
     var body: some View {
         ScrollView{
             HStack{
+                Text("Base Stats").foregroundColor(PokemonColor.Ptype(id: viewModel.mainPokemonType)).bold().padding([.top, .leading], 18.0)
+                Spacer()
+            }
+            HStack{
                 VStack(alignment: .leading){
                     Text("HP")
                     Text("Attack")
@@ -73,14 +77,14 @@ struct PokemonInfoStatsView: View {
                 minHeight: 0,
                 maxHeight: .infinity,
                 alignment: .top
-              )                 .cornerRadius(30.0, corners: .topLeft)
-            .cornerRadius(30.0, corners: .topRight)
+              ).cornerRadius(30.0, corners: .topLeft)
+               .cornerRadius(30.0, corners: .topRight)
            
     }
 }
 
 struct PokemonInfoStats_Previews: PreviewProvider {
     static var previews: some View {
-        PokemonInfoStatsView(pokemonId: 1)
+        PokemonInfoStatsView(pokemonId: 4)
     }
 }

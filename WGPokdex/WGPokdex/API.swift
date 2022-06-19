@@ -363,6 +363,7 @@ public final class PokemonInfoQuery: GraphQLQuery {
           Pokeomon: pokemon_v2_pokemonspecies {
             __typename
             id
+            name
           }
         }
       }
@@ -825,6 +826,7 @@ public final class PokemonInfoQuery: GraphQLQuery {
             return [
               GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
               GraphQLField("id", type: .nonNull(.scalar(Int.self))),
+              GraphQLField("name", type: .nonNull(.scalar(String.self))),
             ]
           }
 
@@ -834,8 +836,8 @@ public final class PokemonInfoQuery: GraphQLQuery {
             self.resultMap = unsafeResultMap
           }
 
-          public init(id: Int) {
-            self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemonspecies", "id": id])
+          public init(id: Int, name: String) {
+            self.init(unsafeResultMap: ["__typename": "pokemon_v2_pokemonspecies", "id": id, "name": name])
           }
 
           public var __typename: String {
@@ -853,6 +855,15 @@ public final class PokemonInfoQuery: GraphQLQuery {
             }
             set {
               resultMap.updateValue(newValue, forKey: "id")
+            }
+          }
+
+          public var name: String {
+            get {
+              return resultMap["name"]! as! String
+            }
+            set {
+              resultMap.updateValue(newValue, forKey: "name")
             }
           }
         }

@@ -33,7 +33,7 @@ struct CustomTabView: View {
                  case .stats:
                     PokemonInfoStatsView(pokemonId: pokemonId)
                  case .evolution:
-                    Text("Evolution").background(Color.BackgroundTypeWater)
+                    PokemonEvolutionView(pokemonId: pokemonId)
                 }
             }
         }

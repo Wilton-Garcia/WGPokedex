@@ -44,7 +44,8 @@ query PokemonInfo($id: Int!) {
   Evolutions: pokemon_v2_pokemonspecies_by_pk(id: $id) {
     Chain: pokemon_v2_evolutionchain {
       Pokeomon: pokemon_v2_pokemonspecies {
-        id
+        id,
+        name
       }
     }
   }
