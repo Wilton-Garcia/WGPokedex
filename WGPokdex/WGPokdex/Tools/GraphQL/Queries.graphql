@@ -17,3 +17,36 @@ query Pokedex($limit: Int!) {
     }
   }
 }
+
+#Detalhes do pokemon
+query PokemonInfo($id: Int!) {
+  Description: pokemon_v2_pokemonspeciesflavortext(where: {pokemon_species_id: {_eq: $id}, pokemon_v2_language: {id: {_eq: 9}}, pokemon_v2_version: {id: {_eq: 7}}}) {
+    flavor_text
+  }
+  PokemonData: pokemon_v2_pokemon_by_pk(id: $id) {
+    id
+    name
+    weight
+    height
+    Types: pokemon_v2_pokemontypes {
+      Type: pokemon_v2_type {
+        id
+        name
+      }
+    }
+  }
+  Status: pokemon_v2_pokemon_by_pk(id: $id) {
+    Stats: pokemon_v2_pokemonstats {
+      id
+      Valor: base_stat
+    }
+  }
+  Evolutions: pokemon_v2_pokemonspecies_by_pk(id: $id) {
+    Chain: pokemon_v2_evolutionchain {
+      Pokeomon: pokemon_v2_pokemonspecies {
+        id,
+        name
+      }
+    }
+  }
+}
